@@ -20,6 +20,34 @@ body {
   color: #777;
   padding: 30px;
 }
+/* ANIMATIONS */
+@keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  80% {
+    transform: translate(15px);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+@keyframes moveInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+  80% {
+    transform: translate(-15px);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+/* END ANIMATIONS */
 /* HEADER */
 .header {
   height: 95vh;
@@ -52,10 +80,13 @@ body {
   font-size: 60px;
   letter-spacing: 35px;
   font-weight: 400;
+  animation: moveInLeft 1s ease-out;
 }
 .header__title--sub {
   display: block;
   font-size: 20px;
   letter-spacing: 17.4px;
+  animation: moveInRight 1s ease-out;
 }
+
 /* END HEADER */
