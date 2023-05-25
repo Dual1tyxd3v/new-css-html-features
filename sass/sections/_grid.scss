@@ -1,7 +1,6 @@
 .row {
   margin: 0 auto;
   width: $row-width;
-  background-color: $color-lgrey;
 
   &:not(:last-child) {
     margin-bottom: $row-gap;
@@ -11,7 +10,6 @@
 }
 
 [class^="col-"] {
-  background-color: orangered;
   float: left;
 
   &:not(:last-child) {
