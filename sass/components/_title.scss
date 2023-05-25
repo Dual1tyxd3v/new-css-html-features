@@ -8,9 +8,22 @@
   -webkit-background-clip: text;
   background-clip: text;
   letter-spacing: 2px;
-  
+  transition: all .2s;
+
   &:hover {
     transform: skewY(2deg) skewX(15deg) scale(1.1);
     text-shadow: .5rem 1rem 2rem rgba($color-black, .2);
   }
+}
+
+.title-secondary {
+  font-size: $font-size-default;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+}
+
+.paragraph {
+  font-size: $font-size-default;
+  margin-bottom: 3rem;
 }

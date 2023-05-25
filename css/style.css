@@ -109,10 +109,23 @@ body {
   -webkit-background-clip: text;
   background-clip: text;
   letter-spacing: 2px;
+  transition: all 0.2s;
 }
 .title:hover {
   transform: skewY(2deg) skewX(15deg) scale(1.1);
   text-shadow: 0.5rem 1rem 2rem rgba(0, 0, 0, 0.2);
+}
+
+.title-secondary {
+  font-size: 1.6rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+}
+
+.paragraph {
+  font-size: 1.6rem;
+  margin-bottom: 3rem;
 }
 
 .header {
@@ -212,5 +225,24 @@ body {
 .about__title-wrap {
   text-align: center;
   margin-bottom: 8rem;
+}
+.about__btn:link, .about__btn:visited {
+  text-decoration: none;
+  color: #55c57a;
+  display: inline-block;
+  padding: 3px;
+  border-bottom: 1px solid #55c57a;
+  transition: all 0.2s;
+  font-size: 1.6rem;
+}
+.about__btn:hover {
+  background-color: #55c57a;
+  color: #fff;
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
+  transform: translateY(-2px);
+}
+.about__btn:active {
+  transform: translateY(0);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
 }
 /*# sourceMappingURL=style.css.map */
