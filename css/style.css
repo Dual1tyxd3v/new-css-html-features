@@ -52,49 +52,41 @@ body {
   background-position: top;
   position: relative;
   clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%); }
-
-.header__logo-box {
-  position: absolute;
-  top: 4rem;
-  left: 4rem; }
-
-.header__logo {
-  height: 3.5rem; }
-
-.header__content {
-  position: absolute;
-  top: 40%;
-  left: 50%;
-  transform: translate(-50%);
-  text-align: center; }
-
-.header__title {
-  color: #fff;
-  text-transform: uppercase;
-  margin-bottom: 6rem;
-  backface-visibility: hidden; }
-
-.header__title--sup {
-  display: block;
-  font-size: 6rem;
-  letter-spacing: 3.5rem;
-  font-weight: 400;
-  animation: moveInLeft 1s ease-out; }
-
-.header__title--sub {
-  display: block;
-  font-size: 2rem;
-  letter-spacing: 1.75rem;
-  animation: moveInRight 1s ease-out; }
-
-.header__btn {
-  animation: moveInBottom .5s ease-out .75s;
-  animation-fill-mode: backwards; }
+  .header__logo-box {
+    position: absolute;
+    top: 4rem;
+    left: 4rem; }
+  .header__logo {
+    height: 3.5rem; }
+  .header__content {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%);
+    text-align: center; }
+  .header__title {
+    color: #fff;
+    text-transform: uppercase;
+    margin-bottom: 6rem;
+    backface-visibility: hidden; }
+    .header__title--sup {
+      display: block;
+      font-size: 6rem;
+      letter-spacing: 3.5rem;
+      font-weight: 400;
+      animation: moveInLeft 1s ease-out; }
+    .header__title--sub {
+      display: block;
+      font-size: 2rem;
+      letter-spacing: 1.75rem;
+      animation: moveInRight 1s ease-out; }
+  .header__btn {
+    animation: moveInBottom .5s ease-out .75s;
+    animation-fill-mode: backwards; }
 
 /* END HEADER */
 /* BTN */
-.btn:link,
-.btn:visited {
+.btn:link, .btn:visited {
   text-decoration: none;
   text-transform: uppercase;
   display: inline-block;
@@ -107,10 +99,15 @@ body {
 .btn--white {
   background-color: #fff;
   color: #777; }
+  .btn--white::after {
+    background-color: #fff; }
 
 .btn:hover {
   transform: translateY(-3px);
   box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.3); }
+  .btn:hover::after {
+    transform: scaleX(1.4) scaleY(1.6);
+    opacity: 0; }
 
 .btn:active {
   transform: translateY(-1px);
@@ -127,12 +124,5 @@ body {
   top: 0;
   left: 0;
   transition: transform .4s, opacity .4s; }
-
-.btn--white::after {
-  background-color: #fff; }
-
-.btn:hover::after {
-  transform: scaleX(1.4) scaleY(1.6);
-  opacity: 0; }
 
 /* END BTN */
