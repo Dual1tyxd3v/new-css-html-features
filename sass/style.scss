@@ -1,7 +1,10 @@
+@import "global/reset";
 @import "global/variables";
 @import "global/global.scss";
 @import "global/animations";
+@import "global/mixins";
 
 @import "components/btn";
 
 @import "sections/header";
+@import "sections/grid";
