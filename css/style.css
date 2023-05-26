@@ -128,6 +128,40 @@ body {
   margin-bottom: 3rem;
 }
 
+.composite {
+  position: relative;
+}
+.composite__img {
+  width: 55%;
+  box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.4);
+  border-radius: 2px;
+  position: absolute;
+  z-index: 5;
+  transition: all 0.2s;
+  outline-offset: 2rem;
+}
+.composite__img--p1 {
+  top: -2rem;
+  left: 0;
+}
+.composite__img--p2 {
+  top: 2rem;
+  right: 0;
+}
+.composite__img--p3 {
+  top: 10rem;
+  left: 20%;
+}
+.composite__img:hover {
+  z-index: 6;
+  transform: scale(1.05) translateY(-0.5rem);
+  box-shadow: 0 2.5rem 4rem rgba(0, 0, 0, 0.5);
+  outline: solid 1.5rem #55c57a;
+}
+.composite:hover .composite__img:not(:hover) {
+  transform: scale(0.95);
+}
+
 .header {
   height: 95vh;
   background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url(../img/hero.jpg);
@@ -175,15 +209,14 @@ body {
 .row {
   margin: 0 auto;
   width: 114rem;
-  /* &::after {
-    content: "";
-    display: table;
-    clear: both;
-  } */
-  overflow: hidden;
 }
 .row:not(:last-child) {
   margin-bottom: 6rem;
+}
+.row::after {
+  content: "";
+  display: table;
+  clear: both;
 }
 
 [class^=col-] {
