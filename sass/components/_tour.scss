@@ -21,6 +21,14 @@
     &--yellow {
       background-image: linear-gradient(to right bottom, $color-yellow, $color-orange);
     }
+    
+    &--green {
+      background-image: linear-gradient(to right bottom, $color-lgreen, $color-dgreen);
+    }
+
+    &--blue {
+      background-image: linear-gradient(to right bottom, $color-blue, $color-purple);
+    }
   }
 
   &:hover &__side--front {
@@ -36,9 +44,18 @@
     clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
     background-blend-mode: screen;
     background-size: cover;
+    border-radius: 3px 3px 0 0;
 
     &--sea {
       background-image: linear-gradient(to right bottom, $color-yellow, $color-orange), url(../img/nat-5.jpg);
+    }
+
+    &--forest {
+      background-image: linear-gradient(to right bottom, $color-lgreen, $color-dgreen), url(../img/nat-6.jpg);
+    }
+
+    &--snow {
+      background-image: linear-gradient(to right bottom, $color-blue, $color-purple), url(../img/nat-7.jpg);
     }
   }
 
@@ -62,6 +79,14 @@
     &--yellow {
       background-image: linear-gradient(to right bottom, rgba($color-yellow, .85), rgba($color-orange, .85));
     }
+
+    &--green {
+      background-image: linear-gradient(to right bottom, rgba($color-lgreen, .85), rgba($color-dgreen, .85));
+    }
+
+    &--blue {
+      background-image: linear-gradient(to right bottom, rgba($color-blue, .85), rgba($color-purple, .85));
+    }
   }
 
   &__list {
@@ -80,5 +105,28 @@
         }
       }
     }
+  }
+
+  &__back {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    text-align: center;
+  }
+
+  &__price-box {
+    color: $color-white;
+    margin-bottom: 8rem;
+  }
+ 
+  &__only {
+    font-size: 1.4rem;
+  }
+
+  &__price {
+    font-size: 6rem;
+    font-weight: 100;
   }
 }
