@@ -184,18 +184,19 @@ body {
 }
 
 .tour {
-  height: 50rem;
+  height: 52rem;
   position: relative;
   perspective: 150rem;
   -moz-perspective: 150rem;
 }
 .tour__side {
-  height: 50rem;
+  height: 52rem;
   position: absolute;
   width: 100%;
   transition: transform 0.8s ease;
   backface-visibility: hidden;
   border-radius: 3px;
+  overflow: hidden;
   box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
 }
 .tour__side--back {
@@ -209,6 +210,48 @@ body {
 }
 .tour:hover .tour__side--back {
   transform: rotateY(0);
+}
+.tour__img {
+  height: 23rem;
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+          clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+  background-blend-mode: screen;
+  background-size: cover;
+}
+.tour__img--sea {
+  background-image: linear-gradient(to right bottom, #ffb900, #ff7730), url(../img/nat-5.jpg);
+}
+.tour__title {
+  font-size: 2.8rem;
+  font-weight: 300;
+  position: absolute;
+  top: 12rem;
+  right: 2rem;
+  text-transform: uppercase;
+  width: 75%;
+  color: #fff;
+  text-align: right;
+}
+.tour__span {
+  padding: 1rem 1.5rem;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+}
+.tour__span--yellow {
+  background-image: linear-gradient(to right bottom, rgba(255, 185, 0, 0.85), rgba(255, 119, 48, 0.85));
+}
+.tour__list ul {
+  font-size: 1.5rem;
+  width: 80%;
+  margin: 0 auto;
+  list-style-type: none;
+  text-align: center;
+}
+.tour__list ul li {
+  padding: 1rem;
+}
+.tour__list ul li:not(:last-child) {
+  border-bottom: 1px solid #eee;
 }
 
 .header {
