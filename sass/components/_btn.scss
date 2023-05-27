@@ -1,7 +1,6 @@
 .btn {
-  animation: moveInBottom .5s ease-out .75s;
-  animation-fill-mode: backwards;
 
+  &,
   &:link,
   &:visited {
     text-decoration: none;
@@ -12,6 +11,8 @@
     transition: transform .2s, box-shadow .2s;
     position: relative;
     font-size: 1.6rem;
+    border: none;
+    cursor: pointer;
   }
 
   &--white {

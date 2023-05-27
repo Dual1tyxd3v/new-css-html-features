@@ -16,6 +16,11 @@
     height: 3.5rem;
   }
 
+  &__btn {
+    animation: moveInBottom .5s ease-out .75s;
+    animation-fill-mode: backwards;
+  }
+
   &__content {
     position: absolute;
     top: 40%;

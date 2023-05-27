@@ -58,7 +58,7 @@ body {
 }
 
 .margin-bottom--medium {
-  margin-bottom: 4rem;
+  margin-bottom: 4rem !important;
 }
 
 .margin-bottom--big {
@@ -69,11 +69,7 @@ body {
   margin-bottom: 10rem !important;
 }
 
-.btn {
-  animation: moveInBottom 0.5s ease-out 0.75s;
-  animation-fill-mode: backwards;
-}
-.btn:link, .btn:visited {
+.btn, .btn:link, .btn:visited {
   text-decoration: none;
   text-transform: uppercase;
   display: inline-block;
@@ -82,6 +78,8 @@ body {
   transition: transform 0.2s, box-shadow 0.2s;
   position: relative;
   font-size: 1.6rem;
+  border: none;
+  cursor: pointer;
 }
 .btn--white {
   background-color: #fff;
@@ -408,7 +406,6 @@ body {
 
 .book {
   background-image: linear-gradient(105deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.9) 50%, transparent 50%), url(../img/nat-10.jpg);
-  height: 50rem;
   background-size: cover;
   border-radius: 3px;
   box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.2);
@@ -432,6 +429,7 @@ body {
   display: block;
   font-family: inherit;
   border-bottom: 3px solid transparent;
+  transition: all 0.3s;
 }
 .form__input:focus {
   border-bottom: 3px solid #55c57a;
@@ -459,6 +457,44 @@ body {
   display: block;
   transition: all 0.3s;
 }
+.form__radio-group {
+  display: inline-block;
+  width: 49%;
+}
+.form__radio-label {
+  font-size: 1.6rem;
+  position: relative;
+  padding-left: 4.5rem;
+  cursor: pointer;
+}
+.form__radio-input {
+  display: none;
+}
+.form__radio-input:checked + .form__radio-label .form__radio-btn::after {
+  background-color: #55c57a;
+}
+.form__radio-btn {
+  position: absolute;
+  display: inline-block;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  top: -0.4rem;
+  left: 0;
+  border: 5px solid #55c57a;
+}
+.form__radio-btn::after {
+  content: "";
+  display: block;
+  width: 1.3rem;
+  height: 1.3rem;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: all 0.2s;
+}
 
 .header {
   height: 95vh;
@@ -476,6 +512,10 @@ body {
 }
 .header__logo {
   height: 3.5rem;
+}
+.header__btn {
+  animation: moveInBottom 0.5s ease-out 0.75s;
+  animation-fill-mode: backwards;
 }
 .header__content {
   position: absolute;

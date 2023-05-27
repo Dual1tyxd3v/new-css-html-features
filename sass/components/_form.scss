@@ -16,6 +16,7 @@
     display: block;
     font-family: inherit;
     border-bottom: 3px solid transparent;
+    transition: all .3s;
     
     &:focus {
       border-bottom: 3px solid $color-green;
@@ -42,5 +43,49 @@
     margin: .7rem 0 0 2rem;
     display: block;
     transition: all .3s;
+  }
+
+  &__radio-group {
+    display: inline-block;
+    width: 49%;
+  }
+
+  &__radio-label {
+    font-size: $font-size-default;
+    position: relative;
+    padding-left: 4.5rem;
+    cursor: pointer;
+  }
+  
+  &__radio-input {
+    display: none;
+  }
+
+  &__radio-input:checked + &__radio-label &__radio-btn::after {
+    background-color: $color-green;
+  }
+
+  &__radio-btn {
+    position: absolute;
+    display: inline-block;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    top: -.4rem;
+    left: 0;
+    border: 5px solid $color-green;
+
+    &::after {
+      content: '';
+      display: block;
+      width: 1.3rem;
+      height: 1.3rem;
+      border-radius: 50%;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      transition: all .2s;
+    }
   }
 }
