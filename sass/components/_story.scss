@@ -16,10 +16,12 @@
     clip-path: circle(50% at 50% 50%);
     shape-outside: circle(50% at 50% 50%);
     transform: translateX(-3rem) skewX(12deg);
+    position: relative;
   }
 
   &__title {
     margin-bottom: 1.5rem;
+    text-transform: uppercase;
   }
 
   &__text {
@@ -28,5 +30,30 @@
 
   &__img {
     height: 100%;
+    transform: translateX(-4rem) scale(1.4);
+    transition: all .5s;
+  }
+
+  &__caption {
+    text-transform: uppercase;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    color: $color-white;
+    font-size: 1.7rem;
+    transform: translate(-50%, 20%);
+    text-align: center;
+    opacity: 0;
+    transition: all .5s;
+  }
+
+  &:hover &__caption {
+    transform: translate(-50%, -50%);
+    opacity: 1;
+  }
+
+  &:hover &__img {
+    transform: translateX(-4rem) scale(1);
+    filter: blur(3px) brightness(80%);
   }
 }

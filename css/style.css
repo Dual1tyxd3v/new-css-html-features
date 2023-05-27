@@ -61,6 +61,10 @@ body {
   margin-bottom: 8rem;
 }
 
+.margin-bottom--huge {
+  margin-bottom: 10rem !important;
+}
+
 .btn {
   animation: moveInBottom 0.5s ease-out 0.75s;
   animation-fill-mode: backwards;
@@ -112,6 +116,26 @@ body {
   top: 0;
   left: 0;
   transition: transform 0.4s, opacity 0.4s;
+}
+
+.btn-text:link, .btn-text:visited {
+  text-decoration: none;
+  color: #55c57a;
+  display: inline-block;
+  padding: 3px;
+  border-bottom: 1px solid #55c57a;
+  transition: all 0.2s;
+  font-size: 1.6rem;
+}
+.btn-text:hover {
+  background-color: #55c57a;
+  color: #fff;
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
+  transform: translateY(-2px);
+}
+.btn-text:active {
+  transform: translateY(0);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
 }
 
 .title {
@@ -326,15 +350,39 @@ body {
           clip-path: circle(50% at 50% 50%);
   shape-outside: circle(50% at 50% 50%);
   transform: translateX(-3rem) skewX(12deg);
+  position: relative;
 }
 .story__title {
   margin-bottom: 1.5rem;
+  text-transform: uppercase;
 }
 .story__text {
   transform: skewX(12deg);
 }
 .story__img {
   height: 100%;
+  transform: translateX(-4rem) scale(1.4);
+  transition: all 0.5s;
+}
+.story__caption {
+  text-transform: uppercase;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  color: #fff;
+  font-size: 1.7rem;
+  transform: translate(-50%, 20%);
+  text-align: center;
+  opacity: 0;
+  transition: all 0.5s;
+}
+.story:hover .story__caption {
+  transform: translate(-50%, -50%);
+  opacity: 1;
+}
+.story:hover .story__img {
+  transform: translateX(-4rem) scale(1);
+  filter: blur(3px) brightness(80%);
 }
 
 .header {
@@ -433,25 +481,6 @@ body {
 .about__title-wrap {
   text-align: center;
   margin-bottom: 8rem;
-}
-.about__btn:link, .about__btn:visited {
-  text-decoration: none;
-  color: #55c57a;
-  display: inline-block;
-  padding: 3px;
-  border-bottom: 1px solid #55c57a;
-  transition: all 0.2s;
-  font-size: 1.6rem;
-}
-.about__btn:hover {
-  background-color: #55c57a;
-  color: #fff;
-  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
-  transform: translateY(-2px);
-}
-.about__btn:active {
-  transform: translateY(0);
-  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
 }
 
 .features {
