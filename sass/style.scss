@@ -3,15 +3,18 @@
 @import "global/global.scss";
 @import "global/animations";
 @import "global/mixins";
+@import "global/utilities.scss";
 
 @import "components/btn";
 @import "components/title";
 @import "components/composite";
 @import "components/feature";
 @import "components/tour";
+@import "components/story";
 
 @import "sections/header";
 @import "sections/grid";
 @import "sections/about";
 @import "sections/features";
 @import "sections/tours";
+@import "sections/stories";
