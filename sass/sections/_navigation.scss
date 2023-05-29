@@ -10,6 +10,12 @@
     z-index: 200;
     background-color: $color-white;
     border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 1rem 3rem rgba($color-black, .1);
+  }
+
+  &__checkbox {
+    display: none;
   }
 
   &__bg {
@@ -21,16 +27,18 @@
     background-image: radial-gradient($color-lgreen, $color-dgreen);
     border-radius: 50%;
     z-index: 150;
-    transform: scale(80);
+    transition: transform .8s cubic-bezier(0.83, 0, 0.17, 1);
   }
 
   &__nav {
     position: fixed;
     height: 100vh;
-    width: 100%;
+    opacity: 0;
     top: 0;
     left: 0;
+    width: 0;
     z-index: 180;
+    transition: all .8s cubic-bezier(0.68, -0.6, 0.32, 1.6);
   }
 
   &__list {
@@ -69,5 +77,14 @@
     span {
       margin-right: 1.5rem;
     }
+  }
+
+  &__checkbox:checked ~ &__bg {
+    transform: scale(80);
+  }
+
+  &__checkbox:checked ~ &__nav {
+    width: 100%;
+    opacity: 1;
   }
 }
