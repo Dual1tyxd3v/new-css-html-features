@@ -3,4 +3,8 @@ body {
   line-height: 1.7;
   color: $color-dgrey;
   padding: 3rem;
+
+  @include respond(tab-port) {
+    padding: 0;
+  }
 }
