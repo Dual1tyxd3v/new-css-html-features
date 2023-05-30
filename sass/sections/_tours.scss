@@ -4,6 +4,10 @@
   background-color: $color-lgrey-1;
   text-align: center;
 
+  @include respond(tab-port) {
+    padding: 20rem 0 10rem;
+  }
+
   &__title-wrap {
     text-align: center;
     margin-bottom: 8rem;
