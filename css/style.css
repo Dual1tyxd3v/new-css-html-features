@@ -239,15 +239,36 @@ body {
   box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.2);
   transition: all 0.5s 0.2s;
 }
+@media (max-width: 75em) {
+  .popup__content {
+    display: block;
+  }
+}
 .popup__left {
   width: 33.333%;
   display: table-cell;
+}
+@media (max-width: 75em) {
+  .popup__left {
+    display: none;
+  }
 }
 .popup__right {
   width: 66.667%;
   display: table-cell;
   padding: 3rem 5rem;
   vertical-align: middle;
+}
+@media (max-width: 75em) {
+  .popup__right {
+    display: block;
+    width: 100%;
+  }
+}
+@media (max-width: 37.5em) {
+  .popup__right {
+    padding: 1rem 1.5rem;
+  }
 }
 .popup__img {
   width: 100%;
@@ -264,6 +285,13 @@ body {
        column-rule: 1px solid #eee;
   -webkit-hyphens: auto;
           hyphens: auto;
+}
+@media (max-width: 37.5em) {
+  .popup__text {
+    -moz-column-count: 1;
+         column-count: 1;
+    margin-bottom: 2rem;
+  }
 }
 .popup__close {
   display: inline-block;
@@ -387,6 +415,13 @@ body {
   perspective: 150rem;
   -moz-perspective: 150rem;
 }
+@media (max-width: 56.25em) {
+  .tour {
+    height: auto;
+    box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
+    background-color: #fff;
+  }
+}
 .tour__side {
   height: 52rem;
   position: absolute;
@@ -400,6 +435,14 @@ body {
 .tour__side--back {
   transform: rotateY(180deg);
 }
+@media (max-width: 56.25em) {
+  .tour__side--back {
+    transform: rotate(0);
+    -webkit-clip-path: polygon(0 15%, 100% 0, 100% 100%, 0 100%);
+            clip-path: polygon(0 15%, 100% 0, 100% 100%, 0 100%);
+    height: auto;
+  }
+}
 .tour__side--yellow {
   background-image: linear-gradient(to right bottom, #ffb900, #ff7730);
 }
@@ -409,8 +452,19 @@ body {
 .tour__side--blue {
   background-image: linear-gradient(to right bottom, #2998ff, #5643fa);
 }
+@media (max-width: 56.25em) {
+  .tour__side {
+    position: relative;
+    box-shadow: none;
+  }
+}
 .tour:hover .tour__side--front {
   transform: rotateY(-180deg);
+}
+@media (max-width: 56.25em) {
+  .tour:hover .tour__side--front {
+    transform: rotateY(0);
+  }
 }
 .tour:hover .tour__side--back {
   transform: rotateY(0);
@@ -470,6 +524,11 @@ body {
 .tour__list ul li:not(:last-child) {
   border-bottom: 1px solid #eee;
 }
+@media (max-width: 56.25em) {
+  .tour__list {
+    padding: 1rem 3rem;
+  }
+}
 .tour__back {
   position: absolute;
   top: 50%;
@@ -478,9 +537,24 @@ body {
   width: 90%;
   text-align: center;
 }
+@media (max-width: 56.25em) {
+  .tour__back {
+    position: relative;
+    top: 0;
+    left: 0;
+    transform: translate(0);
+    padding: 7rem 4rem 4rem 4rem;
+    width: 100%;
+  }
+}
 .tour__price-box {
   color: #fff;
   margin-bottom: 8rem;
+}
+@media (max-width: 56.25em) {
+  .tour__price-box {
+    margin-bottom: 3rem;
+  }
 }
 .tour__only {
   font-size: 1.4rem;
@@ -488,6 +562,11 @@ body {
 .tour__price {
   font-size: 6rem;
   font-weight: 100;
+}
+@media (max-width: 56.25em) {
+  .tour__price {
+    font-size: 4rem;
+  }
 }
 
 .story {
@@ -501,6 +580,18 @@ body {
   font-size: 1.6rem;
   transform: skewX(-12deg);
 }
+@media (max-width: 56.25em) {
+  .story {
+    width: 100%;
+    padding: 4rem;
+    padding-left: 7rem;
+  }
+}
+@media (max-width: 37.5em) {
+  .story {
+    transform: skew(0);
+  }
+}
 .story__shape {
   width: 15rem;
   height: 15rem;
@@ -511,12 +602,22 @@ body {
   transform: translateX(-3rem) skewX(12deg);
   position: relative;
 }
+@media (max-width: 37.5em) {
+  .story__shape {
+    transform: translateX(-3rem) skew(0);
+  }
+}
 .story__title {
   margin-bottom: 1.5rem;
   text-transform: uppercase;
 }
 .story__text {
   transform: skewX(12deg);
+}
+@media (max-width: 37.5em) {
+  .story__text {
+    transform: skew(0);
+  }
 }
 .story__img {
   height: 100%;
@@ -567,9 +668,30 @@ body {
   border-radius: 3px;
   box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.2);
 }
+@media (max-width: 75em) {
+  .book {
+    background-size: cover;
+    background-image: linear-gradient(105deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.9) 65%, transparent 65%), url(../img/nat-10.jpg);
+  }
+}
+@media (max-width: 56.25em) {
+  .book {
+    background-image: linear-gradient(105deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.9) 50%), url(../img/nat-10.jpg);
+  }
+}
 .book__form {
   width: 50%;
   padding: 6rem;
+}
+@media (max-width: 75em) {
+  .book__form {
+    width: 65%;
+  }
+}
+@media (max-width: 56.25em) {
+  .book__form {
+    width: 100%;
+  }
 }
 
 .form__field:not(:last-child) {
@@ -587,6 +709,11 @@ body {
   font-family: inherit;
   border-bottom: 3px solid transparent;
   transition: all 0.3s;
+}
+@media (max-width: 56.25em) {
+  .form__input {
+    width: 100%;
+  }
 }
 .form__input:focus {
   border-bottom: 3px solid #55c57a;
@@ -617,6 +744,12 @@ body {
 .form__radio-group {
   display: inline-block;
   width: 49%;
+}
+@media (max-width: 56.25em) {
+  .form__radio-group {
+    width: 100%;
+    margin-bottom: 2rem;
+  }
 }
 .form__radio-label {
   font-size: 1.6rem;
@@ -858,7 +991,7 @@ body {
 
 .row {
   margin: 0 auto;
-  width: 114rem;
+  max-width: 114rem;
 }
 .row:not(:last-child) {
   margin-bottom: 6rem;

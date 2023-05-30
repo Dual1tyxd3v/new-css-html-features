@@ -23,11 +23,19 @@
     overflow: hidden;
     box-shadow: 0 2rem 4rem rgba($color-black, .2);
     transition: all .5s .2s;
+
+    @include respond(tab-land) {
+      display: block;
+    }
   }
 
   &__left {
     width: 33.333%;
     display: table-cell;
+
+    @include respond(tab-land) {
+      display: none;
+    }
   }
 
   &__right {
@@ -35,6 +43,15 @@
     display: table-cell;
     padding: 3rem 5rem;
     vertical-align: middle;
+
+    @include respond(tab-land) {
+      display: block;
+      width: 100%;
+    }
+
+    @include respond(phone) {
+      padding: 1rem 1.5rem;
+    }
   }
 
   &__img {
@@ -49,6 +66,11 @@
     column-gap: 4rem;
     column-rule: 1px solid $color-lgrey;
     hyphens: auto;
+
+    @include respond(phone) {
+      column-count: 1;
+      margin-bottom: 2rem;
+    }
   }
 
   &__close {
