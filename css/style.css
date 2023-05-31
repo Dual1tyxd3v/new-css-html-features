@@ -37,6 +37,16 @@ body {
   }
 }
 
+::-moz-selection {
+  background-color: #55c57a;
+  color: #fff;
+}
+
+::selection {
+  background-color: #55c57a;
+  color: #fff;
+}
+
 @keyframes moveInLeft {
   0% {
     opacity: 0;
@@ -427,13 +437,6 @@ body {
   perspective: 150rem;
   -moz-perspective: 150rem;
 }
-@media (max-width: 56.25em) {
-  .tour {
-    height: auto;
-    box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
-    background-color: #fff;
-  }
-}
 .tour__side {
   height: 52rem;
   position: absolute;
@@ -447,14 +450,6 @@ body {
 .tour__side--back {
   transform: rotateY(180deg);
 }
-@media (max-width: 56.25em) {
-  .tour__side--back {
-    transform: rotate(0);
-    -webkit-clip-path: polygon(0 15%, 100% 0, 100% 100%, 0 100%);
-            clip-path: polygon(0 15%, 100% 0, 100% 100%, 0 100%);
-    height: auto;
-  }
-}
 .tour__side--yellow {
   background-image: linear-gradient(to right bottom, #ffb900, #ff7730);
 }
@@ -464,19 +459,8 @@ body {
 .tour__side--blue {
   background-image: linear-gradient(to right bottom, #2998ff, #5643fa);
 }
-@media (max-width: 56.25em) {
-  .tour__side {
-    position: relative;
-    box-shadow: none;
-  }
-}
 .tour:hover .tour__side--front {
   transform: rotateY(-180deg);
-}
-@media (max-width: 56.25em) {
-  .tour:hover .tour__side--front {
-    transform: rotateY(0);
-  }
 }
 .tour:hover .tour__side--back {
   transform: rotateY(0);
@@ -536,11 +520,6 @@ body {
 .tour__list ul li:not(:last-child) {
   border-bottom: 1px solid #eee;
 }
-@media (max-width: 56.25em) {
-  .tour__list {
-    padding: 1rem 3rem;
-  }
-}
 .tour__back {
   position: absolute;
   top: 50%;
@@ -549,24 +528,9 @@ body {
   width: 90%;
   text-align: center;
 }
-@media (max-width: 56.25em) {
-  .tour__back {
-    position: relative;
-    top: 0;
-    left: 0;
-    transform: translate(0);
-    padding: 7rem 4rem 4rem 4rem;
-    width: 100%;
-  }
-}
 .tour__price-box {
   color: #fff;
   margin-bottom: 8rem;
-}
-@media (max-width: 56.25em) {
-  .tour__price-box {
-    margin-bottom: 3rem;
-  }
 }
 .tour__only {
   font-size: 1.4rem;
@@ -575,10 +539,42 @@ body {
   font-size: 6rem;
   font-weight: 100;
 }
-@media (max-width: 56.25em) {
-  .tour__price {
-    font-size: 4rem;
+@media (max-width: 56.25em), (hover: none) {
+  .tour {
+    height: auto;
+    box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
+    background-color: #fff;
   }
+  .tour__side {
+    position: relative;
+    box-shadow: none;
+  }
+  .tour__side--back {
+    transform: rotate(0);
+    -webkit-clip-path: polygon(0 15%, 100% 0, 100% 100%, 0 100%);
+            clip-path: polygon(0 15%, 100% 0, 100% 100%, 0 100%);
+    height: auto;
+  }
+  .tour:hover .tour__side--front {
+    transform: rotateY(0);
+  }
+}
+.tour__list {
+  padding: 1rem 3rem;
+}
+.tour__back {
+  position: relative;
+  top: 0;
+  left: 0;
+  transform: translate(0);
+  padding: 7rem 4rem 4rem 4rem;
+  width: 100%;
+}
+.tour__price-box {
+  margin-bottom: 3rem;
+}
+.tour__price {
+  font-size: 4rem;
 }
 
 .story {
