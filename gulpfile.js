@@ -83,7 +83,7 @@ function deleteImgs() {
 }
 
 const change = (done) => {
-  changeSrc('source', 'build', '.html');
+  changeSrc('./', 'build', '.html');
   changeSrc('build/css', 'build/css', '.css');
   done();
 }
@@ -96,7 +96,7 @@ const copyFonts = () => {
 exports.copyFonts = copyFonts;
 
 const style = () => {
-  return gulp.src('source/css/style.css')
+  return gulp.src('css/style.css')
     .pipe(csso())
     .pipe(rename('style.min.css'))
     .pipe(gulp.dest('build/css'))
@@ -105,7 +105,7 @@ const style = () => {
 exports.style = style;
 
 const js = () => {
-  return gulp.src('source/js/*.js')
+  return gulp.src('js/*.js')
     .pipe(jsMin())
     .pipe(rename('script.min.js'))
     .pipe(gulp.dest('build/js'));
@@ -113,7 +113,7 @@ const js = () => {
 exports.js = js;
 
 const images = () => {
-  return gulp.src('source/img/*.{jpg,jpeg,png}')
+  return gulp.src('img/*.{jpg,jpeg,png}')
     .pipe(imageMin([
       imageMin.optipng({optimizationLevel: 3}),
       imageMin.mozjpeg({progressive: false}),
@@ -130,7 +130,7 @@ const webpImg = () => {
 exports.webpImg = webpImg;
 
 const copyWebp = () => {
-  return gulp.src('source/img/*.webp')
+  return gulp.src('img/*.webp')
     .pipe(webP({quality: 90}))
     .pipe(gulp.dest('build/img'));
 }
@@ -138,7 +138,7 @@ const copyWebp = () => {
 exports.copyWebp = copyWebp;
 
 const copySVG = () => {
-  return gulp.src('source/img/*.svg')
+  return gulp.src('img/*.svg')
     .pipe(gulp.dest('build/img'));
 }
 
@@ -151,7 +151,7 @@ const cleanImg = (done) => {
 exports.cleanImg = cleanImg;
 
 const copyPHP = () => {
-  return gulp.src('source/js/*.php')
+  return gulp.src('js/*.php')
     .pipe(gulp.dest('build/js'));
 }
 exports.copyPHP = copyPHP;
